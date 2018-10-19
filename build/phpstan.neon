@@ -1,7 +1,6 @@
 includes:
 	- ../vendor/phpstan/phpstan-phpunit/extension.neon
 	- ../vendor/phpstan/phpstan-phpunit/rules.neon
-	- ../vendor/phpstan/phpstan-phpunit/strictRules.neon
 	- ../vendor/phpstan/phpstan-strict-rules/rules.neon
 
 parameters:
@@ -10,3 +9,5 @@ parameters:
 		- %currentWorkingDirectory%/vendor/squizlabs/php_codesniffer/src/Util/Tokens.php
 	excludes_analyse:
 		- */tests/*/data/*
+	checkNullables: false
+	#checkUnionTypes: false
